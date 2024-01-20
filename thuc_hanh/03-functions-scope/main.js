@@ -174,56 +174,79 @@ function sum(...numbers) {
 //DECLARATION VS EXPRESSION || KHAI BÁO VÀ BIỂU THỨC
 
 
-console.log(addDollarSign(100));
-// Function Declaration || Khai báo hàm
-function addDollarSign(value) {
-    return '$' + value;
-}
+// console.log(addDollarSign(100));
+// // Function Declaration || Khai báo hàm
+// function addDollarSign(value) {
+//     return '$' + value;
+// }
 
-// When using declarations, you can invoke the function before the declaration. With expressions, you can not
-// Khi khai báo hàm, bạn có thể gọi hàm trước khi khai báo(VD trên), còn đối với biểu thức thì không thể
+// // When using declarations, you can invoke the function before the declaration. With expressions, you can not
+// // Khi khai báo hàm, bạn có thể gọi hàm trước khi khai báo(VD trên), còn đối với biểu thức thì không thể
 
-// Function Expression
-const addPlusSign = function (value) {
-    return `+ ${value}`;
-};
+// // Function Expression
+// const addPlusSign = function (value) {
+//     return `+ ${value}`;
+// };
 
-console.log(addPlusSign(200));
-
-
-//iife giúp tạo nhanh 1 hàm
+// console.log(addPlusSign(200));
 
 
-// FUNCTION CHALLENGES
-
-//Challenges 1: Tạo 1 hàm quy đổi từ độ F -> độ C, có thể sử dụng arrow function (trong 1 dòng)
-// Công thức quy đổi từ độ F sang C : (độ F - 32)*5/9 hoặc 0.555
-const getCelsius = (temperatureF) => {
-    return temperatureC = (temperatureF - 32) * 5/9;
-}
-
-console.log(getCelsius(99.5));
+// //iife giúp tạo nhanh 1 hàm
 
 
-// Challenge 2: Tạo 1 arrow function nhận vào là 1 mảng và trả về  1 đối tượng có số nhỏ nhất và lớn nhất
+// // FUNCTION CHALLENGES
 
-const minMax = (...numbers) => {
-    const max = Math.max(...numbers);
-    const min = Math.min(...numbers);
+// //Challenges 1: Tạo 1 hàm quy đổi từ độ F -> độ C, có thể sử dụng arrow function (trong 1 dòng)
+// // Công thức quy đổi từ độ F sang C : (độ F - 32)*5/9 hoặc 0.555
+// const getCelsius = (temperatureF) => {
+//     return temperatureC = (temperatureF - 32) * 5/9;
+// }
 
-    return objMinMax = {
-        min: min,
-        max: max
-    }
-}
+// console.log(getCelsius(99.5));
 
-console.log(minMax(0, 1, 2, 3, 5, 675467))
 
-// Challenge 3: dùng iife (Biểu thức hàm được gọi ngay lập tức),
-// lấy chiều dài và chiều rộng của hình chữ nhật, xuất nó ra bằng console một thông báo ngay khi tải trang.
+// // Challenge 2: Tạo 1 arrow function nhận vào là 1 mảng và trả về  1 đối tượng có số nhỏ nhất và lớn nhất
 
-console.log((function(length, width) {
-    const rectangle = length * width;
-    const output = `Hình chữ nhật có chiều dài là ${length} và chiều cao là ${width} có diện tích bằng ${rectangle}`;
-    return output;
-})(10, 5));
+// const minMax = (...numbers) => {
+//     const max = Math.max(...numbers);
+//     const min = Math.min(...numbers);
+
+//     return objMinMax = {
+//         min: min,
+//         max: max
+//     }
+// }
+
+// console.log(minMax(0, 1, 2, 3, 5, 675467))
+
+// // Challenge 3: dùng iife (Biểu thức hàm được gọi ngay lập tức),
+// // lấy chiều dài và chiều rộng của hình chữ nhật, xuất nó ra bằng console một thông báo ngay khi tải trang.
+
+// console.log((function(length, width) {
+//     const rectangle = length * width;
+//     const output = `Hình chữ nhật có chiều dài là ${length} và chiều cao là ${width} có diện tích bằng ${rectangle}`;
+//     return output;
+// })(10, 5));
+
+// 
+
+// Open 'sources' tab and put a breakpoint at the first() function
+
+// First Example
+
+function first() {
+    console.log('first...');
+  }
+  
+  function second() {
+    console.log('second...');
+  }
+  
+  function third() {
+    console.log('third...');
+  }
+  
+  first();
+  second();
+  third();
+  
